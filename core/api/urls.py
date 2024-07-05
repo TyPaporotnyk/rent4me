@@ -8,7 +8,7 @@ from core.api.v1.urls import router as v1_router
 api = NinjaAPI()
 
 
-@api.get("/ping", response=PingResponseSchema)
+@api.get("ping/", response=PingResponseSchema)
 def ping(request: HttpRequest) -> PingResponseSchema:
     return PingResponseSchema(result=True)
 
