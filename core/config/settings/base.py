@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # first party
     "core.apps.rentals",
+    "core.apps.customers",
 ]
 
 MIDDLEWARE = [

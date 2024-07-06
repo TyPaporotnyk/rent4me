@@ -15,7 +15,7 @@ class BaseRentalService(ABC):
     def get_by_id(self, rental_id: int) -> Rental: ...
 
 
-class RentalService(BaseRentalService):
+class ORMRentalService(BaseRentalService):
 
     def get_rental_list(self) -> Iterable[Rental]:
         qs = RentalModel.objects.all()

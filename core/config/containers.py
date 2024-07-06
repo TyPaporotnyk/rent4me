@@ -3,7 +3,7 @@ from logging import Logger, getLogger
 
 import punq
 
-from core.apps.rentals.services.rentals import BaseRentalService, RentalService
+from core.apps.rentals.services.rentals import BaseRentalService, ORMRentalService
 
 
 @lru_cache(1)
@@ -18,6 +18,6 @@ def _initialize_container() -> punq.Container:
     container.register(Logger, factory=getLogger, name="django.request")
 
     # initialize services
-    container.register(BaseRentalService, RentalService)
+    container.register(BaseRentalService, ORMRentalService)
 
     return container
